@@ -1,0 +1,79 @@
+<p>companyprofile works!</p>
+<div class="container">
+
+    <div>
+        <img src="https://www.gouriimpex.com/upload/images/web%20company%20profile%288%29.jpg" alt="">
+    </div>
+    <div>
+        <h2>COMPANY PROFILE</h2>
+    </div>
+    <div>
+        <p>
+            {{profile}}
+        </p>
+    </div>
+
+    <div>
+        <h3>Products Offered By Us</h3>
+    </div>
+
+    <div>
+        <p>
+            {{offeredbyus}}
+        </p>
+    </div>
+
+    <div>
+        <ul *ngFor="let p of offeredproductsbyus">
+            <li>{{p.name}}</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Why Choose Us?</h3>
+    </div>
+
+    <div>
+        <p>
+            {{chooseuswhy}}
+        </p>
+    </div>
+
+    <div>
+        <ul *ngFor="let c of chooseuswhydetails">
+            <li>{{c.name}}</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Company Fact Sheet</h3>
+    </div>
+
+    <table style="width:100%">
+        <tr *ngFor="let d of factsheet">
+            <td><strong>{{d.comment}}</strong></td>
+            <td>{{d.value}}</td>
+        </tr>
+    </table>
+    <br>
+
+    <div class="container">
+
+        <table class="table table-condensed">
+
+            <tbody>
+                <tr>
+                    <td *ngFor="let d of certificates"><img src="{{d.src}} "> </td>
+                </tr>
+
+                <tr>
+                    <td *ngFor="let d of certificates"><strong>{{d.name}}</strong></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+</div>

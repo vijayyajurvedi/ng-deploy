@@ -1,0 +1,31 @@
+ 
+
+li{
+    text-align:left;
+    font-size: larger;
+}
+
+/* .scroll {
+    max-height: 60%;
+    overflow-y: auto;
+} */
+
+.scroll {
+    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    /* overflow-style: auto; */
+    height: 600px;
+}
+
+.img1 { 
+    width: 80%; 
+    height: 80%; 
+    }
+
+    .img2 { 
+        width: 50%; 
+        height: 50%; 
+        }
+
+ 

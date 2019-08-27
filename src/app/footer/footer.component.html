@@ -1,0 +1,33 @@
+<p>footer works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <h3>Contact Info</h3>
+            <hr>
+            <ul style="list-style-type:none;">
+                <li *ngFor="let o of contactusdetails">
+                    {{o.details}}
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="col-3">
+            <h3>Quick Links</h3>
+            <hr>
+            <ul style="list-style-type:none;">
+                <li *ngFor="let o of quicklinks">
+                    {{o.details}}
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <p style="text-align:center;">© 2016 Gouri Impex. All rights reserved | Developed By
+            <a target="_blank" href="http://www.pioneerweb.net/">Pioneer Infoworld</a>
+        </p>
+    </div>
+
+</div>

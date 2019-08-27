@@ -1,0 +1,166 @@
+<p>scheme works!</p>
+
+<div class="div container">
+    <div>
+        <h2>OUR SCHEME</h2>
+    </div>
+    <P></P>
+    <div class="row">
+        See In English | See In Marathi | See In Hindi | See In Kannad | See In Gujrati
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <table>
+                <tr *ngFor="let o of schemeimages">
+                    <td>
+                        <img src={{o.details}} class="img-thumbnail">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-10">
+            <div class="container card scroll">
+                <strong>W E L-C O M E</strong><br>
+                <p></p>
+                <strong>WE&nbsp; ARE&nbsp; VERY&nbsp; MUCH&nbsp; PLEASED TO&nbsp; LAUNCH&nbsp; A SCHEME</strong>
+                <p></p>
+                <div class="jumbotron">
+                    <h2 style="color: rgb(51, 0, 255); font-weight: 700; font-size: 30px; text-align: center;">MEMBER
+                        THROUGH MEMBER WELFARE &amp; PAYBACK SCHEME</h2>
+                </div>
+
+                <p></p>
+                <strong>MAIN AND THE ONLY MOTIVE OF THIS PROJECT IS</strong>
+                <p></p>
+                <ol>
+                    <li *ngFor="let m of projectmovite">{{m.motive}}<p></p>
+                    </li>
+                </ol>
+
+                <strong>OBJECTIVES OF THE SCHEME</strong>
+                <p></p>
+                <ol>
+                    <li *ngFor="let o of schemeobjective">{{o.obj}}<p></p>
+                    </li>
+                </ol>
+                <p></p>
+                <strong>HOW THE SCHEME WORKS ?</strong>
+                <p></p>
+                <ol>
+                    <li *ngFor="let o of schemeworks">{{o.works}}<p></p>
+                    </li>
+                </ol>
+                <p></p>
+
+                <strong>DETAILS OF UTILISATION OF MEMBERSHIP FEE AMOUNT</strong>
+
+                <table border="0" cellpadding="0" cellspacing="0" width="584">
+                    <tbody>
+                        <tr height="21" *ngFor="let d of utilisationdetails">
+                            <td align="left" width="428">
+                                {{d.details}}
+                            </td>
+                            <td width="60">
+                                {{d.currency}}
+                            </td>
+                            <td align="right" width="65">
+                                {{d.Amt}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p></p>
+                <strong>PAY BACK CALCULATIONS</strong>
+                <p></p>
+                <img src={{paybackcalcimg}} class="img1">
+                <p></p>
+                <img src={{memberreqimg}} class="img2">
+                <p></p>
+
+                <h2>
+                    <span style="color:#FF0000;">
+                        <strong><small>What will the members get from this?</small></strong>
+                    </span>
+                </h2>
+
+                <h2>
+                    <span style="color:#0000CD;">
+                        <strong><small>Is there any plan for a member? </small></strong>
+                    </span>
+                </h2>
+
+                <h2>
+                    <small>
+                        <span style="color:#006400;"><strong>Yes &nbsp; </strong></span>
+                    </small>
+                </h2>
+                <ol>
+                    <li *ngFor="let o of benifitdetails">{{o.details}}<p></p>
+                    </li>
+                </ol>
+
+                <h3>
+                    <span style="color:#FF0000;">
+                        <strong>WHICH WILL BE THE REWARDS ?</strong>
+                    </span>
+                </h3>
+
+                <p></p>
+
+                <ol>
+                    <li *ngFor="let o of rewards">{{o.details}}<p></p>
+                    </li>
+                </ol>
+
+                <h3><br>
+                    <span style="color:#FF0000;"><strong>WHERE WILL&nbsp; BE&nbsp; THE&nbsp; TRIPS&nbsp;
+                            &nbsp;?</strong></span>
+                </h3>
+
+                <p></p>
+
+                <ol>
+                    <li *ngFor="let o of trips">{{o.details}}<p></p>
+                    </li>
+                </ol>
+
+                <h3>
+                    <span style="color:#0000FF;">
+                        <strong>Rewards and trips can be changed per availabity without prior notice</strong>
+                    </span></h3>
+
+                <p></p>
+
+
+                <h3><strong>
+                        <span style="color:#FF0000;">
+                            For&nbsp;more information, please view PPT Presentation</span>
+                        <span style="color:#FF0000;"> </span>
+                        <span style="color:#FF0000;">attached to&nbsp;Schemes menu on the Web site</span>
+                    </strong></h3>
+
+                <p></p>
+
+                <h3>
+                    <span style="color:#800080;">
+                        <strong>BOUNDARY CONDITIONS</strong>
+                    </span>
+                </h3>
+                <p></p>
+                <ol>
+                    <li *ngFor="let o of boundaryconditions">{{o.details}}<p></p>
+                    </li>
+                </ol>
+
+                <div>
+                    <h2 style="color:#F30;text-align:center;">
+                        <strong>THANK YOU</strong>
+                    </h2>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

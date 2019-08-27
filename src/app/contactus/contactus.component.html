@@ -1,0 +1,22 @@
+<p>contactus works!</p>
+<div class="container">
+    <p></p>
+
+    <img class="img-responsive" src={{contactusimgs}} style="width: 1135px; height: 180px;">
+
+    <p></p>
+    <h3>CONTACT US</h3>
+    <p></p>
+
+    <div class="container">
+        <h4 style="text-align: left;">Contact Details</h4>
+
+        <hr>
+        <ul style="list-style-type:none;">
+            <li *ngFor="let o of contactusdetails">
+                {{o.details}}
+            </li>
+
+        </ul>
+    </div>
+</div>

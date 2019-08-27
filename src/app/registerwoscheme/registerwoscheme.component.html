@@ -1,0 +1,42 @@
+<p>registerwoscheme works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <button type="button" class="btn btn-primary">BACK</button>
+        </div>
+        <div class="col-4"> </div>
+        <div class="col-4"> </div>
+    </div>
+    <div class="row">
+        <div class="col-1"> </div>
+        <div class="col-10">
+            <img src="https://www.gouriimpex.com/images/logo-9.jpg" align="middle">
+        </div>
+        <div class="col-1"> </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10 card">
+            <div class="card-body">
+                <p><strong>Create Account For Without Scheme</strong></p>
+
+                <form class="form-group">
+                    <input type="hidden" name="command">
+                    <div class="form-group">
+                        <select name="usertype" class="form-control">
+                            <option value="" selected="selected"> - Select -</option>
+                            <option *ngFor="let d of usertypedd_data" value={{d.type}}> {{d.type | titlecase}}  </option>
+                        </select>
+                    </div>
+
+
+
+                </form>
+
+
+            </div>
+        </div>
+        <div class="col-1"> </div>
+    </div>
+</div>
