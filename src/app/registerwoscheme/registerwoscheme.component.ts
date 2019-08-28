@@ -16,8 +16,9 @@ export class RegisterwoschemeComponent implements OnInit {
   constructor(private displayc: DisplaycomponentService,
     private router: Router,
     private formBuilder: FormBuilder) { }
-  registerForm: FormGroup;
 
+  registerForm: FormGroup;
+  valid_email: boolean;
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group(
@@ -41,6 +42,17 @@ export class RegisterwoschemeComponent implements OnInit {
       });
   }
 
+  checkemailexist($event) {
+    this.registerForm.patchValue({ name: $event.target.value.toUpperCase() })
+    let getkey = localStorage.getItem(this.emailid.value);
+    if (getkey === null) {
+      this.valid_email = true;
+      this.emailid.setErrors(null);
+    }
+    else {
+      this.emailid.setErrors({ mismatch: true });
+    }
+  }
   // All is this method
   onPasswordChange() {
     if (this.confirm_password.value == this.password.value) {
@@ -48,6 +60,10 @@ export class RegisterwoschemeComponent implements OnInit {
     } else {
       this.confirm_password.setErrors({ mismatch: true });
     }
+  }
+
+  get emailid(): AbstractControl {
+    return this.registerForm.controls['emailid'];
   }
 
   // getting the form control elements

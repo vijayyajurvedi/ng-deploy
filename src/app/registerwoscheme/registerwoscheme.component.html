@@ -66,8 +66,10 @@
                         <div class="">
                             <input type="text" name="emailid" formControlName="emailid" class="form-control"
                                 placeholder="Email Id" style="text-transform: uppercase"
-                                (change)="registerForm.patchValue({name: $event.target.value.toUpperCase()})">
+                                (change)="checkemailexist($event);">
                         </div>
+                        <span *ngIf="emailid.hasError('mismatch')" style="color: red">Email Exist try different
+                            email</span>
                     </div>
 
                     <div class="form-group">

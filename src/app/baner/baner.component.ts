@@ -10,11 +10,13 @@ export class BanerComponent implements OnInit {
 
   constructor(private displayc: DisplaycomponentService) { }
 
+  public loginstatus: string = "Login Existing User";
+
   ngOnInit() {
   }
 
-  hidecomponent()
-  {
+  hidecomponent() {
+
     this.displayc.changeMessage(false);
   }
 

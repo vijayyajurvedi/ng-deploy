@@ -50,6 +50,7 @@ export class LoginexistinguserComponent implements OnInit {
         window.alert("Login Sucessfull");
         this.displayc.changeMessage(true);
         this.router.navigate(['/', 'home'])
+
       }
       else {
         alert("Enter Correct User ID & Password Again");

@@ -18,6 +18,7 @@ export class ParentComponent implements OnInit {
 
   clearlocalstorage() {
     localStorage.clear();
+    console.log("Storage Cleared.")
   }
   readlocalstorage() {
     for (let i = 0; i < localStorage.length; i++) {

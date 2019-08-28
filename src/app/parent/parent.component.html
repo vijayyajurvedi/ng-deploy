@@ -2,9 +2,21 @@
     <p>parent works!</p>
 </div>
 
+<div class="row container">
+    <div class="col-sm-4">
+        <button type="button" class="btn btn-primary btn-sm" (click)="readlocalstorage();">Read</button>
+    </div>
+    <div class="col-sm-4">
+        <p></p>
+    </div>
+    <div class="col-sm-4">
+        <button type="button" class="btn btn-primary btn-sm" (click)="clearlocalstorage();"
+            [disabled]=true>Clear</button>
+    </div>
 
-<!-- <button type="button" class="btn btn-primary" (click)="readlocalstorage();">Read Local Storage</button> -->
-<!-- <button type="button" class="btn btn-primary" (click)="clearlocalstorage();">Clear Local Storage</button> -->
+
+</div>
+
 
 <div class="container" *ngIf="showcomponent">
     <app-header></app-header>
