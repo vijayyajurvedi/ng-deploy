@@ -40,8 +40,8 @@ export class LoginexistinguserComponent implements OnInit {
       }
       let storagevalue: MyObj = JSON.parse(getkey);
 
-      console.log(storagevalue.emailid);
-      console.log(storagevalue.password);
+      // console.log(storagevalue.emailid);
+      // console.log(storagevalue.password);
 
       //localStorage.setItem(this.loginform.controls.emailid.value, JSON.stringify(this.loginform.value))
       // console.log(JSON.stringify(this.loginform.value));
