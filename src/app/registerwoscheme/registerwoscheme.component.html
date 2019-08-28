@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-4">
-            <button type="button" class="btn btn-primary">BACK</button>
+            <button type="button" class="btn btn-primary" (click)="showcomponent();">BACK</button>
         </div>
         <div class="col-4"> </div>
         <div class="col-4"> </div>
@@ -21,16 +21,140 @@
             <div class="card-body">
                 <p><strong>Create Account For Without Scheme</strong></p>
 
-                <form class="form-group">
-                    <input type="hidden" name="command">
+                <form class="form-group" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <label class="">Director Name</label>
+
                     <div class="form-group">
-                        <select name="usertype" class="form-control">
-                            <option value="" selected="selected"> - Select -</option>
-                            <option *ngFor="let d of usertypedd_data" value={{d.type}}> {{d.type | titlecase}}  </option>
+                        <select name="usertype" formControlName="usertype" class="form-control">
+                            <option selected="selected"> - Select -</option>
+                            <option *ngFor="let d of usertypedd_data" value={{d.type}}> {{d.type | titlecase}} </option>
                         </select>
                     </div>
 
+                    <label class="">Donation Account / Executive (Sales) Name</label>
 
+                    <div class="form-group">
+                        <select name="dealername" formControlName="dealername" class="form-control">
+                            <option selected="selected"> - Select -</option>
+                            <option *ngFor="let d of dealernamedd_data" value={{d.name}}> {{d.name | uppercase}}
+                            </option>
+                        </select>
+                    </div>
+
+                    <span style="color:#D55B09; font-weight:700">(Please confirm Above selected Donation Account /
+                        Executive (Sales) Name before register.)</span>
+
+                    <div class="form-group">
+                        <label class="">Salutation</label>
+                        <div class=""><input type="text" name="salutation" formControlName="salutation"
+                                class="form-control" placeholder=" Ms. / Mrs. / Mr. / Smt. / M/s ">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Your Name</label>
+
+                        <div class="">
+                            <input type="text" name="name" formControlName="name" class="form-control"
+                                placeholder="Your Name">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Email Id</label>
+                        <div class="">
+                            <input type="text" name="emailid" formControlName="emailid" class="form-control"
+                                placeholder="Email Id" style="text-transform: uppercase"
+                                (change)="registerForm.patchValue({name: $event.target.value.toUpperCase()})">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Password</label>
+                        <div class=""><input type="password" name="password" formControlName="password"
+                                class="form-control" placeholder="Password" (change)="onPasswordChange()">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Reenter password</label>
+                        <div class="">
+                            <input type="password" name="repassword" formControlName="repassword" class="form-control"
+                                placeholder="Reenter password" (change)="onPasswordChange()">
+                        </div>
+                        <span *ngIf="confirm_password.hasError('mismatch')" style="color: red">Password do not
+                            match.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Birth Date</label>
+                        <div class="">
+                            <input type="date" name="dob" formControlName="dob" class="form-control"
+                                placeholder="Birth Date">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Mobile No.</label>
+                        <div class=""><input type="text" name="mobileno" formControlName="mobileno" class="form-control"
+                                placeholder="Mobile No.">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Landline No.</label>
+                        <div class=""><input type="text" name="landlineno" formControlName="landlineno"
+                                class="form-control" placeholder="Landline No.">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Address</label>
+                        <div class="">
+                            <textarea name="address" cols="40" rows="10" formControlName="address" class="form-control"
+                                placeholder="Address">
+
+                                </textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">City</label>
+                        <div class=""><input type="text" name="city" formControlName="city" class="form-control"
+                                placeholder="City">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">State</label>
+                        <select name="state" formControlName="state" class="form-control">
+                            <option selected="selected"> - Select -</option>
+                            <option *ngFor="let d of statedd_data" value={{d.name}}> {{d.name | uppercase}}
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Zip Code</label>
+                        <div class=""><input type="text" name="zipcode" formControlName="zipcode" class="form-control"
+                                placeholder="Zip Code">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Country</label>
+                        <select name="country" formControlName="country" class="form-control">
+                            <option selected="selected"> - Select -</option>
+                            <option *ngFor="let d of countrydd_data" value={{d.name}}> {{d.name | uppercase}}
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Create Your Gouriimpex Account"
+                            name="create" [disabled]="!registerForm.valid">
+                    </div>
 
                 </form>
 

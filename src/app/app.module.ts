@@ -16,6 +16,9 @@ import { SchemeComponent } from './scheme/scheme.component';
 import { PptpresentationComponent } from './pptpresentation/pptpresentation.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { RegisterwoschemeComponent } from './registerwoscheme/registerwoscheme.component';
+ 
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginexistinguserComponent } from './loginexistinguser/loginexistinguser.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +35,13 @@ import { RegisterwoschemeComponent } from './registerwoscheme/registerwoscheme.c
     SchemeComponent,
     PptpresentationComponent,
     ContactusComponent,
-    RegisterwoschemeComponent
+    RegisterwoschemeComponent,
+    LoginexistinguserComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

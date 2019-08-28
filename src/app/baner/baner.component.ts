@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DisplaycomponentService } from '../displaycomponent.service';
 
 @Component({
   selector: 'app-baner',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BanerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private displayc: DisplaycomponentService) { }
 
   ngOnInit() {
+  }
+
+  hidecomponent()
+  {
+    this.displayc.changeMessage(false);
   }
 
 }

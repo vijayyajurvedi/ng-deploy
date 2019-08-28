@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DisplaycomponentService } from '../displaycomponent.service';
 
 @Component({
   selector: 'app-parent',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
+  showcomponent: boolean;
 
-  constructor() { }
+  constructor(private displayc: DisplaycomponentService) { }
 
   ngOnInit() {
+
+    this.displayc.currentmessage.subscribe(message => this.showcomponent = message)
+  }
+
+  clearlocalstorage() {
+    localStorage.clear();
+  }
+  readlocalstorage() {
+    for (let i = 0; i < localStorage.length; i++) {
+      let key = localStorage.key(i);
+      let value = localStorage.getItem(key);
+      console.log("Key: " + key, '\n' + "Value: " + value);
+    }
+
+
   }
 
 }

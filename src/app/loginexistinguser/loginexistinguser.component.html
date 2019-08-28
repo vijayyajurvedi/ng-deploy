@@ -1,0 +1,54 @@
+<p>loginexistinguser works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <button type="button" class="btn btn-primary" (click)="showcomponent();">BACK</button>
+        </div>
+        <div class="col-4"> </div>
+        <div class="col-4"> </div>
+    </div>
+    <div class="row">
+        <div class="col-1"> </div>
+        <div class="col-10">
+            <img src="https://www.gouriimpex.com/images/logo-9.jpg" align="middle">
+        </div>
+        <div class="col-1"> </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10 card">
+            <div class="card-body">
+                <p><strong>Login Details</strong></p>
+
+                <form class="form-group" [formGroup]="loginform" (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label class="">User Name </label>
+                        <div class="">
+                            <input type="text" name="emailid" formControlName="emailid" class="form-control"
+                                placeholder="Email Id Only" style="text-transform: uppercase"
+                                (change)="loginform.patchValue({name: $event.target.value.toUpperCase()})">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="">Password</label>
+                        <div class=""><input type="password" name="password" formControlName="password"
+                                class="form-control" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Log In" name="create"
+                            [disabled]="!loginform.valid">
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+        <div class="col-1"> </div>
+    </div>
+</div>

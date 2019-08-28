@@ -1,3 +1,4 @@
+import { LoginexistinguserComponent } from './loginexistinguser/loginexistinguser.component';
 import { PptpresentationComponent } from './pptpresentation/pptpresentation.component';
 import { SchemeComponent } from './scheme/scheme.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'scheme', component: SchemeComponent },
   { path: 'pptpresentation', component: PptpresentationComponent },
   { path: 'contactus', component: ContactusComponent },
-  {path:'registerwoscheme',component:RegisterwoschemeComponent}
+  { path: 'registerwoscheme', component: RegisterwoschemeComponent },
+  { path: 'loginexistinguser', component: LoginexistinguserComponent }
 ];
 
 @NgModule({
